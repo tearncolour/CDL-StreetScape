@@ -1,0 +1,9 @@
+{
+  "id": "CDLC.TS",
+  "displayName": "CDL:StreetScape",
+  "author": "MeroT",
+  "version": "0.12.108",
+  "description": "CSL Driving Life : StreetScape (named TrafficSigns until 0.12.48), placeable and editable Chinese road signs, place-name signs, supports, variable-message screens, your own signs from PNG pictures, road markings, barriers and railings, noise barriers, road greening, lamp-post ads and street furniture, with road snapping, a renderer, placement tools and a searchable Roads catalogue. The screens follow the game's traffic with the Realistic Information Extension (CDLC.TS.RIE). Phase 4 test build. Bundles the traffic sign font 交通标志专用字体 (see NOTICE.md).",
+  "isCodeMod": true,
+  "dependencies": []
+}

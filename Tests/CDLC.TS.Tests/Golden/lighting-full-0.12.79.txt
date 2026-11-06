@@ -1,0 +1,2 @@
+custom.text|text=文字灯箱;font=bundled;fb=1;style=plain;curve=straight;sweep=120;h=0.5;sp=0;ls=115;align=centre;glow=warm;glow2=gold;ret=black;depth=6;tilt=0;tri=0;mount=auto;arc=0|20d41fc957225eb8
+custom.stand|text=立式灯箱;font=bundled;face=ground;h=0.4;sp=0;ls=115;align=centre;glow=warm;frame=steel;margin=8;depth=20;tilt=10;lift=30|51489bf12a18809a

@@ -1,0 +1,419 @@
+mk.clear|default|4d25767f9dce13f5
+mk.auto|default|2648f87372e8d66e
+mk.auto|grid 0.4|5168b71f28ff9212
+mk.line.centre|straight 0.0|2bfce8aa651c63ae
+mk.line.centre|arc 0.0|fa31aa6374e10316
+mk.line.centre|straight 3.5|2bfce8aa651c63ae
+mk.line.centre|arc 3.5|fa31aa6374e10316
+mk.line.lane|straight 0.0|2df19d4385df5c2e
+mk.line.lane|arc 0.0|fed29426fb6e770d
+mk.line.lane|straight 3.5|2df19d4385df5c2e
+mk.line.lane|arc 3.5|fed29426fb6e770d
+mk.line.tidal|straight 0.0|451b6cb5fb530939
+mk.line.tidal|arc 0.0|7351a978c487ae3f
+mk.line.tidal|straight 3.5|451b6cb5fb530939
+mk.line.tidal|arc 3.5|7351a978c487ae3f
+mk.line.tidalstop|straight 0.0|b46cb44397461fbb
+mk.line.tidalstop|arc 0.0|b56da746da94d079
+mk.line.tidalstop|straight 3.5|b46cb44397461fbb
+mk.line.tidalstop|arc 3.5|b56da746da94d079
+mk.line.edge|straight 0.0|6c07f008562d2377
+mk.line.edge|arc 0.0|1ff5cd85a968a77a
+mk.line.edge|straight 3.5|6c07f008562d2377
+mk.line.edge|arc 3.5|1ff5cd85a968a77a
+mk.line.waiting|straight 0.0|8b7ef3ba19f7744a
+mk.line.waiting|arc 0.0|13503b338b713c65
+mk.line.waiting|straight 3.5|8b7ef3ba19f7744a
+mk.line.waiting|arc 3.5|13503b338b713c65
+mk.waiting|default|3844b5f69e7d44bb
+mk.waiting|grid 0.4|a8aef7b3dc7990bd
+mk.line.junction|straight 0.0|5d0d5be2188b0460
+mk.line.junction|arc 0.0|ca5c50200f307c4a
+mk.line.junction|straight 3.5|5d0d5be2188b0460
+mk.line.junction|arc 3.5|ca5c50200f307c4a
+mk.line.change|straight 0.0|f35f3771e8b41d70
+mk.line.change|arc 0.0|46fa5548fa29e65b
+mk.line.change|straight 3.5|f35f3771e8b41d70
+mk.line.change|arc 3.5|46fa5548fa29e65b
+mk.crosswalk|default|1e453f5149d7891c
+mk.crosswalk|grid 0.4|3143941bef11f348
+mk.diamond|default|943bce42fffbca8c
+mk.diamond|grid 0.4|155366282a31eb44
+mk.pedarrow|default|ca64a0ea60a68d2d
+mk.pedarrow|grid 0.4|9b66a488b84a4ed2
+mk.chevron|default|2f38c506762ab3ea
+mk.chevron|grid 0.4|a99aed8b45cce6f7
+mk.halfdisc|straight 0.0|668bab9a8b994142
+mk.halfdisc|arc 0.0|668bab9a8b994142
+mk.halfdisc|straight 3.5|668bab9a8b994142
+mk.halfdisc|arc 3.5|668bab9a8b994142
+mk.bay.parallel|default|09d59e558a6e955c
+mk.bay.parallel|grid 0.4|1d44c5bdac4b3a7c
+mk.bay.angled|default|5f045a1c232d1f3f
+mk.bay.angled|grid 0.4|d684d263174295d1
+mk.bay.perpendicular|default|8bc75ce64b6c7fdc
+mk.bay.perpendicular|grid 0.4|bb83c26002c0d72c
+mk.bay.arrow|default|38c791be1ca3f71f
+mk.bay.arrow|grid 0.4|ac38b0d0dd68198f
+mk.bay.taxi|default|1a8c53465a49330f
+mk.bay.taxi|grid 0.4|5d7e920fd5966592
+mk.bay.disabled|default|3da17b3b5a14b926
+mk.bay.disabled|grid 0.4|d8a010b0c934eeb2
+mk.bay.bicycle|default|beb763efb961ac6c
+mk.bay.bicycle|grid 0.4|7a12a807a37bed3d
+mk.bay.timed|default|7f0ad23785674964
+mk.bay.timed|grid 0.4|ed41ac368cef9dd4
+mk.busbay|default|77a272f259768255
+mk.busbay|grid 0.4|06ce366f3a506f33
+mk.kerbstop|default|087e11a0f5d37adb
+mk.kerbstop|grid 0.4|7b368e4310303737
+mk.hump.large|default|b8c6180aed459600
+mk.hump.large|grid 0.4|a3294bcf5174098d
+mk.hump.small|default|6cfadd7e3eef83ba
+mk.hump.small|grid 0.4|055e7591cb6271ea
+mk.hump.warning|default|f70d6deb80c1ba90
+mk.hump.warning|grid 0.4|cf8b20930415ceb4
+mk.arrow.straight|default|4f22fa87bd7c6f45
+mk.arrow.straight|grid 0.4|cc7ceabc7fb116c6
+mk.arrow.straightleft|default|488b8e6d320d4b08
+mk.arrow.straightleft|grid 0.4|e9993f434cd9018b
+mk.arrow.left|default|f3024805ae1e588e
+mk.arrow.left|grid 0.4|ab958bd32fbc75dd
+mk.arrow.straightright|default|df6ecb7b26b0d520
+mk.arrow.straightright|grid 0.4|a2b96bce625d7574
+mk.arrow.right|default|69964c7474f9b4ec
+mk.arrow.right|grid 0.4|36c7f4e930cac2ff
+mk.arrow.uturn|default|811dd4c4c3d36643
+mk.arrow.uturn|grid 0.4|1964d6c4dc07fe72
+mk.arrow.straightuturn|default|e847d109d6ce8cf0
+mk.arrow.straightuturn|grid 0.4|f2c84ec770a6c682
+mk.arrow.leftuturn|default|528bc8d674782009
+mk.arrow.leftuturn|grid 0.4|b89e6742307acd48
+mk.arrow.leftright|default|9cdbfa8b3d260f33
+mk.arrow.leftright|grid 0.4|8a615f39d1d394dc
+mk.arrow.mergeleft|default|a90dfea383be9bf2
+mk.arrow.mergeleft|grid 0.4|47d02b12146e0dc0
+mk.arrow.mergeright|default|fc45341534bc13b1
+mk.arrow.mergeright|grid 0.4|60a596ca86af7f2f
+mk.speed|default|39995f9dfb198478
+mk.speed|grid 0.4|8789571e0670800a
+mk.text|default|b6eb1098a90334f8
+mk.text|grid 0.4|b2e6aae4a85bfec8
+mk.text.free|default|10ae8a0634322a14
+mk.text.free|grid 0.4|b49ea7abf0d0f5dc
+mk.speedface|default|fc2cb02ca5326e7a
+mk.speedface|grid 0.4|1877b5f2832cfc0e
+mk.sym.bicycle|default|8b199a8f13e4227e
+mk.sym.bicycle|grid 0.4|2eaa4ae3d911e100
+mk.sym.arrow|default|159fe389b51e8f76
+mk.sym.arrow|grid 0.4|bd5d9da5b2ab64f1
+mk.sym.shared|default|c6aaefe23def339f
+mk.sym.shared|grid 0.4|ad435a18c6ab9db5
+mk.sym.ebike|default|da62819bef03148c
+mk.sym.ebike|grid 0.4|4eeadf7eac7d0046
+mk.sym.pedestrian|default|353b6e8ba8987af3
+mk.sym.pedestrian|grid 0.4|5ce7be1297ccbe38
+mk.sym.wheelchair|default|36439a811544cf37
+mk.sym.wheelchair|grid 0.4|e61e23a60db47a4e
+mk.zigzag|default|5eb95ac1d75f5969
+mk.zigzag|grid 0.4|7bc302e8e68ddb29
+mk.bicyclecrossing|default|38fbf1db4eced5f0
+mk.bicyclecrossing|grid 0.4|088aaff455cd4969
+mk.line.doubleyellow|straight 0.0|b6c122bab5647a4d
+mk.line.doubleyellow|arc 0.0|4d0551108b9fc16f
+mk.line.doubleyellow|straight 3.5|b6c122bab5647a4d
+mk.line.doubleyellow|arc 3.5|4d0551108b9fc16f
+mk.line.yellowsd|straight 0.0|892a07d677253595
+mk.line.yellowsd|arc 0.0|e0c9781aad6a980c
+mk.line.yellowsd|straight 3.5|892a07d677253595
+mk.line.yellowsd|arc 3.5|e0c9781aad6a980c
+mk.line.yellowsingle|straight 0.0|bda7a4b4120269de
+mk.line.yellowsingle|arc 0.0|3e5de4aaa469e82f
+mk.line.yellowsingle|straight 3.5|bda7a4b4120269de
+mk.line.yellowsingle|arc 3.5|3e5de4aaa469e82f
+mk.line.whitesolid|straight 0.0|6c07f008562d2377
+mk.line.whitesolid|arc 0.0|1ff5cd85a968a77a
+mk.line.whitesolid|straight 3.5|6c07f008562d2377
+mk.line.whitesolid|arc 3.5|1ff5cd85a968a77a
+mk.line.whitesd|straight 0.0|0ecfd95aa6bfe0a1
+mk.line.whitesd|arc 0.0|f386ff8cc0d89a07
+mk.line.whitesd|straight 3.5|0ecfd95aa6bfe0a1
+mk.line.whitesd|arc 3.5|f386ff8cc0d89a07
+mk.kerb.nopark|straight 0.0|d9d819e7b51af258
+mk.kerb.nopark|arc 0.0|929f14586e190010
+mk.kerb.nopark|straight 3.5|d9d819e7b51af258
+mk.kerb.nopark|arc 3.5|929f14586e190010
+mk.kerb.nolong|straight 0.0|d40d6c89ac1c854d
+mk.kerb.nolong|arc 0.0|411034549d29a004
+mk.kerb.nolong|straight 3.5|d40d6c89ac1c854d
+mk.kerb.nolong|arc 3.5|411034549d29a004
+mk.nopark.road|default|13ffe27b026ed9a0
+mk.nopark.road|grid 0.4|d1d232caa7c02a70
+mk.stop|default|758f01aa1b0d08d4
+mk.stop|grid 0.4|683e5647ff268a6c
+mk.giveway.stop|default|25e907638496fcbe
+mk.giveway.stop|grid 0.4|6c00ae2a89329314
+mk.giveway.yield|default|6e98612d02111630
+mk.giveway.yield|grid 0.4|8be28fe40da133fc
+mk.channel|default|4d3872384a418ec2
+mk.channel|grid 0.4|b529976dd3f0f470
+mk.centre.circle|default|511d81cf7e4504d1
+mk.centre.circle|grid 0.4|945023dd02cf998c
+mk.centre.diamond|default|7aa8481e2dfcc904
+mk.centre.diamond|grid 0.4|bd51f481f8a43dee
+mk.grid|default|0ce5e3986c30b190
+mk.grid|grid 0.4|3628444f4e6a220d
+mk.grid.simple|default|dd06161c27e5e174
+mk.grid.simple|grid 0.4|2ca350e3bb31fb5b
+mk.line.reserved|straight 0.0|96efd3e64ca12938
+mk.line.reserved|arc 0.0|1c2e76bfac477a3c
+mk.line.reserved|straight 3.5|96efd3e64ca12938
+mk.line.reserved|arc 3.5|1c2e76bfac477a3c
+mk.line.guidelane|straight 0.0|6c07f008562d2377
+mk.line.guidelane|arc 0.0|1ff5cd85a968a77a
+mk.line.guidelane|straight 3.5|6c07f008562d2377
+mk.line.guidelane|arc 3.5|1ff5cd85a968a77a
+mk.line.variable|straight 0.0|c27eee4dc1c42a91
+mk.line.variable|arc 0.0|597c1ac885190af0
+mk.line.variable|straight 3.5|c27eee4dc1c42a91
+mk.line.variable|arc 3.5|597c1ac885190af0
+mk.noturn|default|3b7998b7615f597a
+mk.noturn|grid 0.4|9eea978f5d6716fc
+mk.gore|default|7039e5472d424aa0
+mk.gore|grid 0.4|f5ed29caa14b5572
+mk.line.thick|straight 0.0|92dd43d8d10e8735
+mk.line.thick|arc 0.0|bae637dc95565131
+mk.line.thick|straight 3.5|92dd43d8d10e8735
+mk.line.thick|arc 3.5|bae637dc95565131
+mk.strip|straight 0.0|7daeed47d8ad7dba
+mk.strip|arc 0.0|c7b0d01ea3daf158
+mk.strip|straight 3.5|7daeed47d8ad7dba
+mk.strip|arc 3.5|c7b0d01ea3daf158
+mk.taper|default|508813cdf69be402
+mk.taper|grid 0.4|a6455ae613861c05
+mk.obstacle|default|9505d19645ec81a4
+mk.obstacle|grid 0.4|29189094227a4bfc
+mk.rumble.transverse|default|2aa0a477816586f4
+mk.rumble.transverse|grid 0.4|11b31bcfff763470
+mk.rumble.longitudinal|straight 0.0|c06fdf8c20a0f42c
+mk.rumble.longitudinal|arc 0.0|5325803b9aa42c25
+mk.rumble.longitudinal|straight 3.5|c06fdf8c20a0f42c
+mk.rumble.longitudinal|arc 3.5|5325803b9aa42c25
+mk.toll.plaza|default|5aff766271fcfad1
+mk.toll.plaza|grid 0.4|2d434ec398529c22
+mk.toll.island|default|5db0c8f566842061
+mk.toll.island|grid 0.4|6108129ce3af3523
+mk.railway|default|e016b7545d3e3fd6
+mk.railway|grid 0.4|6c197d74c264ecc3
+mk.elevation|default|f915f4f9c3346fcb
+mk.elevation|grid 0.4|f915f4f9c3346fcb
+mk.stud|straight 0.0|a8dffdc71cc90d1c
+mk.stud|arc 0.0|1629d17f1d71a996
+mk.stud|straight 3.5|a8dffdc71cc90d1c
+mk.stud|arc 3.5|1629d17f1d71a996
+mk.delineator|straight 0.0|d1c4357b9968d65c
+mk.delineator|arc 0.0|039bcafe02f6a264
+mk.delineator|straight 3.5|d1c4357b9968d65c
+mk.delineator|arc 3.5|039bcafe02f6a264
+bar.wbeam|straight 0.0|7acab6c6d43349b3
+bar.wbeam|arc 0.0|d5a843d0d83ea628
+bar.wbeam|straight 3.5|7acab6c6d43349b3
+bar.wbeam|arc 3.5|d5a843d0d83ea628
+bar.concrete|straight 0.0|0e10176d61b5c0c2
+bar.concrete|arc 0.0|e110f48d9d53ef4e
+bar.concrete|straight 3.5|0e10176d61b5c0c2
+bar.concrete|arc 3.5|e110f48d9d53ef4e
+bar.fence|straight 0.0|de04f1ca54f15a24
+bar.fence|arc 0.0|9e2d9554576d76db
+bar.fence|straight 3.5|de04f1ca54f15a24
+bar.fence|arc 3.5|9e2d9554576d76db
+bar.auto|default|9304617ed3fa4efd
+bar.auto|grid 0.4|84d0f2109d8edbbe
+bar.cable|straight 0.0|18c345c9251afe85
+bar.cable|arc 0.0|60c8a26aea00c78b
+bar.cable|straight 3.5|18c345c9251afe85
+bar.cable|arc 3.5|60c8a26aea00c78b
+bar.post|straight 0.0|124ec4a166e1da10
+bar.post|arc 0.0|626e1922d9d02284
+bar.post|straight 3.5|124ec4a166e1da10
+bar.post|arc 3.5|626e1922d9d02284
+bar.block|straight 0.0|0dd07a05b82a3f93
+bar.block|arc 0.0|16a76e8511b862bb
+bar.block|straight 3.5|0dd07a05b82a3f93
+bar.block|arc 3.5|16a76e8511b862bb
+bar.bollard|straight 0.0|19c8add5eb45dbc2
+bar.bollard|arc 0.0|65e362be983afc8e
+bar.bollard|straight 3.5|19c8add5eb45dbc2
+bar.bollard|arc 3.5|65e362be983afc8e
+bar.water|straight 0.0|fc1b5ae1e5ce4218
+bar.water|arc 0.0|305749512c042701
+bar.water|straight 3.5|fc1b5ae1e5ce4218
+bar.water|arc 3.5|305749512c042701
+bar.drum|straight 0.0|99cf9e348b1bd355
+bar.drum|arc 0.0|f7fc9b9697db5cb7
+bar.drum|straight 3.5|99cf9e348b1bd355
+bar.drum|arc 3.5|f7fc9b9697db5cb7
+bar.hoarding|straight 0.0|4bf5e601bf1b08d4
+bar.hoarding|arc 0.0|41f645de549274f6
+bar.hoarding|straight 3.5|4bf5e601bf1b08d4
+bar.hoarding|arc 3.5|41f645de549274f6
+bar.cone|straight 0.0|9d5ef544af9be5b9
+bar.cone|arc 0.0|e14a6a30597903c7
+bar.cone|straight 3.5|9d5ef544af9be5b9
+bar.cone|arc 3.5|e14a6a30597903c7
+bar.gate|default|e731ef90eadae67b
+bar.gate|grid 0.4|39e93db9a058c8fa
+bar.booth|default|e2b8748863c70791
+bar.booth|grid 0.4|2108cba40d985931
+bar.island|default|e7e0f95ac9d54862
+bar.island|grid 0.4|14afe451908219ce
+bar.hump|default|701ae8e5d1ec94bc
+bar.hump|grid 0.4|6e442fe0c4060b30
+bar.fence.hk|straight 0.0|81005ea24e262387
+bar.fence.hk|arc 0.0|047754c267f203ea
+bar.fence.hk|straight 3.5|81005ea24e262387
+bar.fence.hk|arc 3.5|047754c267f203ea
+bar.fence.ped|straight 0.0|cdb4fc98a704f3a5
+bar.fence.ped|arc 0.0|0a0acf244e836682
+bar.fence.ped|straight 3.5|cdb4fc98a704f3a5
+bar.fence.ped|arc 3.5|0a0acf244e836682
+bar.fence.low|straight 0.0|75fb4126dcf8b916
+bar.fence.low|arc 0.0|6925b9f7e62f8a9b
+bar.fence.low|straight 3.5|75fb4126dcf8b916
+bar.fence.low|arc 3.5|6925b9f7e62f8a9b
+bar.lawn|straight 0.0|b1ebc9b374d1c661
+bar.lawn|arc 0.0|d3a345a76062bd41
+bar.lawn|straight 3.5|b1ebc9b374d1c661
+bar.lawn|arc 3.5|d3a345a76062bd41
+bar.flexpost|straight 0.0|0030016af6ba5018
+bar.flexpost|arc 0.0|47064b4bc1a9f0ba
+bar.flexpost|straight 3.5|0030016af6ba5018
+bar.flexpost|arc 3.5|47064b4bc1a9f0ba
+bar.planter|straight 0.0|2ce76a5daa0dfb3e
+bar.planter|arc 0.0|4932dc720b009a17
+bar.planter|straight 3.5|2ce76a5daa0dfb3e
+bar.planter|arc 3.5|4932dc720b009a17
+bar.planterbox|straight 0.0|f1e252eeefd6ff3f
+bar.planterbox|arc 0.0|5cc5b233984b6a96
+bar.planterbox|straight 3.5|f1e252eeefd6ff3f
+bar.planterbox|arc 3.5|5cc5b233984b6a96
+bar.combo|straight 0.0|3845540876cd82d6
+bar.combo|arc 0.0|4698a90fff1c57ed
+bar.combo|straight 3.5|3845540876cd82d6
+bar.combo|arc 3.5|4698a90fff1c57ed
+bar.beampost|straight 0.0|9eb0f7898d2fb363
+bar.beampost|arc 0.0|ea7af77e8cb174db
+bar.beampost|straight 3.5|9eb0f7898d2fb363
+bar.beampost|arc 3.5|ea7af77e8cb174db
+bar.movable|straight 0.0|995f01e62475c79c
+bar.movable|arc 0.0|e28a38843ca81b28
+bar.movable|straight 3.5|995f01e62475c79c
+bar.movable|arc 3.5|e28a38843ca81b28
+bar.fence.bj|straight 0.0|6c6978a7571099f2
+bar.fence.bj|arc 0.0|20b7abcbe212bf73
+bar.fence.bj|straight 3.5|6c6978a7571099f2
+bar.fence.bj|arc 3.5|20b7abcbe212bf73
+bar.fence.zinc|straight 0.0|7fb2835ef8a8987b
+bar.fence.zinc|arc 0.0|c3e4ad63c051e0fd
+bar.fence.zinc|straight 3.5|7fb2835ef8a8987b
+bar.fence.zinc|arc 3.5|c3e4ad63c051e0fd
+bar.crowd|straight 0.0|b5781dfb9e2ebd99
+bar.crowd|arc 0.0|d208fdf975aaa655
+bar.crowd|straight 3.5|b5781dfb9e2ebd99
+bar.crowd|arc 3.5|d208fdf975aaa655
+bar.bridgerail|straight 0.0|6202b99b3a8008fc
+bar.bridgerail|arc 0.0|d488b2384a6f91a8
+bar.bridgerail|straight 3.5|6202b99b3a8008fc
+bar.bridgerail|arc 3.5|d488b2384a6f91a8
+bar.stone|straight 0.0|e4f3a564dfd9eafa
+bar.stone|arc 0.0|8049d8a15cf3428c
+bar.stone|straight 3.5|e4f3a564dfd9eafa
+bar.stone|arc 3.5|8049d8a15cf3428c
+bar.fence.mesh|straight 0.0|44efd097acb64374
+bar.fence.mesh|arc 0.0|dc763ccc6d0750c0
+bar.fence.mesh|straight 3.5|44efd097acb64374
+bar.fence.mesh|arc 3.5|dc763ccc6d0750c0
+bar.antithrow|straight 0.0|eee0f99a4847645a
+bar.antithrow|arc 0.0|8b14ffdb67382263
+bar.antithrow|straight 3.5|eee0f99a4847645a
+bar.antithrow|arc 3.5|8b14ffdb67382263
+bar.stoneball|straight 0.0|aafaafecda5be3c4
+bar.stoneball|arc 0.0|bbb64f06aeff8b4a
+bar.stoneball|straight 3.5|aafaafecda5be3c4
+bar.stoneball|arc 3.5|bbb64f06aeff8b4a
+bar.fauxwood|straight 0.0|271906e384e3a235
+bar.fauxwood|arc 0.0|ae8ecb8a039fbb73
+bar.fauxwood|straight 3.5|271906e384e3a235
+bar.fauxwood|arc 3.5|ae8ecb8a039fbb73
+bar.palisade|straight 0.0|04689a634e06fd13
+bar.palisade|arc 0.0|0cf234f7c66b84a1
+bar.palisade|straight 3.5|04689a634e06fd13
+bar.palisade|arc 3.5|0cf234f7c66b84a1
+bar.edgeguard|straight 0.0|fe6fa60a182c8d2a
+bar.edgeguard|arc 0.0|57af6efb18c9be0f
+bar.edgeguard|straight 3.5|fe6fa60a182c8d2a
+bar.edgeguard|arc 3.5|57af6efb18c9be0f
+bar.green.pit|straight 0.0|b98ce283d6e2d0ab
+bar.green.pit|arc 0.0|3c6113ab337a463e
+bar.green.pit|straight 3.5|b98ce283d6e2d0ab
+bar.green.pit|arc 3.5|3c6113ab337a463e
+bar.green.belt|straight 0.0|ff8b89588377da9e
+bar.green.belt|arc 0.0|4e79f1371c47e1b7
+bar.green.belt|straight 3.5|ff8b89588377da9e
+bar.green.belt|arc 3.5|4e79f1371c47e1b7
+bar.green.viaduct|straight 0.0|af14bd56cbb8c324
+bar.green.viaduct|arc 0.0|57baa26453869668
+bar.green.viaduct|straight 3.5|af14bd56cbb8c324
+bar.green.viaduct|arc 3.5|57baa26453869668
+bar.green.bowl|straight 0.0|8c53e5d5118ddd60
+bar.green.bowl|arc 0.0|16d2641f5a2756f7
+bar.green.bowl|straight 3.5|8c53e5d5118ddd60
+bar.green.bowl|arc 3.5|16d2641f5a2756f7
+bar.livingwall|straight 0.0|4cb928d3dbcf505d
+bar.livingwall|arc 0.0|0c4f6cd0b4ed4055
+bar.livingwall|straight 3.5|4cb928d3dbcf505d
+bar.livingwall|arc 3.5|0c4f6cd0b4ed4055
+bar.noise|straight 0.0|07c26b99a91ec641
+bar.noise|arc 0.0|ccbf65de5dc43d50
+bar.noise|straight 3.5|07c26b99a91ec641
+bar.noise|arc 3.5|ccbf65de5dc43d50
+bar.noise.cover|straight 0.0|adcb408431f3addb
+bar.noise.cover|arc 0.0|d4d36f12786da813
+bar.noise.cover|straight 3.5|adcb408431f3addb
+bar.noise.cover|arc 3.5|d4d36f12786da813
+bar.noise.cement|straight 0.0|d17be7232178b811
+bar.noise.cement|arc 0.0|13a7f5834b7fd88f
+bar.noise.cement|straight 3.5|d17be7232178b811
+bar.noise.cement|arc 3.5|13a7f5834b7fd88f
+bar.noise.brick|straight 0.0|938c6c3f33f3a1af
+bar.noise.brick|arc 0.0|353ed78ac40b805e
+bar.noise.brick|straight 3.5|938c6c3f33f3a1af
+bar.noise.brick|arc 3.5|353ed78ac40b805e
+bar.noise.green|straight 0.0|7be6c3857f035f66
+bar.noise.green|arc 0.0|54928302d075d00c
+bar.noise.green|straight 3.5|7be6c3857f035f66
+bar.noise.green|arc 3.5|54928302d075d00c
+bar.fret|straight 0.0|c5cbab575afc8f2b
+bar.fret|arc 0.0|1fa45c38bd66c271
+bar.fret|straight 3.5|c5cbab575afc8f2b
+bar.fret|arc 3.5|1fa45c38bd66c271
+bar.fence.ring|straight 0.0|6136e521a4d6050b
+bar.fence.ring|arc 0.0|5a13dceedf9f779a
+bar.fence.ring|straight 3.5|6136e521a4d6050b
+bar.fence.ring|arc 3.5|5a13dceedf9f779a
+bar.delpost|straight 0.0|0c61001c3ddca695
+bar.delpost|arc 0.0|0c61001c3ddca695
+bar.delpost|straight 3.5|0c61001c3ddca695
+bar.delpost|arc 3.5|0c61001c3ddca695
+bar.milepost|straight 0.0|ddc8aec367e14245
+bar.milepost|arc 0.0|ddc8aec367e14245
+bar.milepost|straight 3.5|ddc8aec367e14245
+bar.milepost|arc 3.5|ddc8aec367e14245
+bar.boundary|straight 0.0|147b364d92f278f9
+bar.boundary|arc 0.0|147b364d92f278f9
+bar.boundary|straight 3.5|147b364d92f278f9
+bar.boundary|arc 3.5|147b364d92f278f9
+bar.junctionpost|straight 0.0|d67f0dfda90f3675
+bar.junctionpost|arc 0.0|d39da24293f06e61
+bar.junctionpost|straight 3.5|d67f0dfda90f3675
+bar.junctionpost|arc 3.5|d39da24293f06e61

@@ -1,0 +1,265 @@
+{
+  "ActionPill": {
+    "kind": "function",
+    "arity": 0,
+    "name": "ActionPill"
+  },
+  "Dock": {
+    "kind": "function",
+    "arity": 0,
+    "name": "Dock"
+  },
+  "EditorPanel": {
+    "kind": "function",
+    "arity": 0,
+    "name": "EditorPanel"
+  },
+  "GameWindow": {
+    "kind": "function",
+    "arity": 0,
+    "name": "GameWindow"
+  },
+  "Guard": {
+    "kind": "function",
+    "arity": 1,
+    "name": ""
+  },
+  "KeysPanel": {
+    "kind": "function",
+    "arity": 0,
+    "name": "KeysPanel"
+  },
+  "MainPanel": {
+    "kind": "function",
+    "arity": 0,
+    "name": "MainPanel"
+  },
+  "RestoreDialog": {
+    "kind": "function",
+    "arity": 0,
+    "name": "RestoreDialog"
+  },
+  "SettingsPanel": {
+    "kind": "function",
+    "arity": 0,
+    "name": "SettingsPanel"
+  },
+  "TabStrip": {
+    "kind": "function",
+    "arity": 1,
+    "name": "TabStrip"
+  },
+  "TsButton": {
+    "kind": "function",
+    "arity": 0,
+    "name": "TsButton"
+  },
+  "actions": {
+    "kind": "object"
+  },
+  "addId": {
+    "kind": "string"
+  },
+  "back": {
+    "kind": "function",
+    "arity": 0,
+    "name": "back"
+  },
+  "blurActive": {
+    "kind": "function",
+    "arity": 0,
+    "name": "blurActive"
+  },
+  "capsWidth": {
+    "kind": "function",
+    "arity": 1,
+    "name": "capsWidth"
+  },
+  "choiceLayout": {
+    "kind": "function",
+    "arity": 1,
+    "name": "choiceLayout"
+  },
+  "clampTop": {
+    "kind": "function",
+    "arity": 2,
+    "name": "clampTop"
+  },
+  "columns": {
+    "kind": "number"
+  },
+  "commitNow": {
+    "kind": "function",
+    "arity": 3,
+    "name": "commitNow"
+  },
+  "commitSoon": {
+    "kind": "function",
+    "arity": 4,
+    "name": "commitSoon"
+  },
+  "default": {
+    "kind": "function",
+    "arity": 1,
+    "name": null
+  },
+  "filterEntries": {
+    "kind": "function",
+    "arity": 3,
+    "name": "filterEntries"
+  },
+  "filteredOf": {
+    "kind": "function",
+    "arity": 3,
+    "name": "filteredOf"
+  },
+  "groupsOf": {
+    "kind": "function",
+    "arity": 1,
+    "name": "groupsOf"
+  },
+  "hasCSS": {
+    "kind": "boolean"
+  },
+  "icons": {
+    "kind": "object"
+  },
+  "keyParts": {
+    "kind": "function",
+    "arity": 1,
+    "name": "keyParts"
+  },
+  "kindIcon": {
+    "kind": "function",
+    "arity": 1,
+    "name": "kindIcon"
+  },
+  "matches": {
+    "kind": "function",
+    "arity": 2,
+    "name": "matches"
+  },
+  "memoParse": {
+    "kind": "function",
+    "arity": 1,
+    "name": "memoParse"
+  },
+  "modules": {
+    "kind": "object"
+  },
+  "normalize": {
+    "kind": "function",
+    "arity": 1,
+    "name": "normalize"
+  },
+  "onEscape": {
+    "kind": "function",
+    "arity": 1,
+    "name": "onEscape"
+  },
+  "paginate": {
+    "kind": "function",
+    "arity": 3,
+    "name": "paginate"
+  },
+  "panelLeft": {
+    "kind": "function",
+    "arity": 1,
+    "name": "panelLeft"
+  },
+  "panelVisible": {
+    "kind": "function",
+    "arity": 1,
+    "name": "panelVisible"
+  },
+  "parseCatalog": {
+    "kind": "function",
+    "arity": 1,
+    "name": "parseCatalog"
+  },
+  "parseCustom": {
+    "kind": "function",
+    "arity": 1,
+    "name": "parseCustom"
+  },
+  "parseEditor": {
+    "kind": "function",
+    "arity": 1,
+    "name": "parseEditor"
+  },
+  "parseHint": {
+    "kind": "function",
+    "arity": 1,
+    "name": "parseHint"
+  },
+  "perPage": {
+    "kind": "number"
+  },
+  "pickTab": {
+    "kind": "function",
+    "arity": 2,
+    "name": "pickTab"
+  },
+  "previewSize": {
+    "kind": "function",
+    "arity": 4,
+    "name": "previewSize"
+  },
+  "reportError": {
+    "kind": "function",
+    "arity": 2,
+    "name": "reportError"
+  },
+  "sameEntity": {
+    "kind": "function",
+    "arity": 2,
+    "name": "sameEntity"
+  },
+  "scrollStrip": {
+    "kind": "function",
+    "arity": 2,
+    "name": "scrollStrip"
+  },
+  "search": {
+    "kind": "function",
+    "arity": 2,
+    "name": "search"
+  },
+  "setUi": {
+    "kind": "function",
+    "arity": 1,
+    "name": "setUi"
+  },
+  "settingsTab": {
+    "kind": "string"
+  },
+  "status": {
+    "kind": "object"
+  },
+  "stepFrom": {
+    "kind": "function",
+    "arity": 3,
+    "name": "stepFrom"
+  },
+  "stripEntered": {
+    "kind": "function",
+    "arity": 0,
+    "name": "stripEntered"
+  },
+  "stripSlots": {
+    "kind": "number"
+  },
+  "tabsOf": {
+    "kind": "function",
+    "arity": 2,
+    "name": "tabsOf"
+  },
+  "textWidth": {
+    "kind": "function",
+    "arity": 1,
+    "name": "textWidth"
+  },
+  "ui": {
+    "kind": "object"
+  }
+}

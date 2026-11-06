@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1130" viewBox="0 0 1800 1130" font-family="'Microsoft YaHei', 'Segoe UI', 'Noto Sans SC', sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#546e7a"/></marker><marker id="as" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M10 0 L0 5 L10 10 z" fill="#546e7a"/></marker></defs>
+<rect width="1800" height="1130" fill="#ffffff"/>
+<text x="40" y="42" font-size="26" font-weight="bold" fill="#1c2733" text-anchor="start">CDL:StreetScape（CDLC.TS）0.12.91 架构图</text>
+<text x="40" y="68" font-size="13" font-weight="normal" fill="#5f6b7a" text-anchor="start">来源：2026-11-05 对仓库的逐项调查，行数为 C# 非空行。绿色 = 纯逻辑层（0 个文件引用游戏引擎），蓝色 = 依赖游戏引擎，红色圆点 1 到 7 = 一块牌子从点击到存档的生命线（见左下）。</text>
+<rect x="40" y="90" width="1720" height="118" rx="10" fill="#eef0f4" stroke="#6b778c" stroke-width="1.6"/>
+<text x="54" y="114" font-size="15" font-weight="bold" fill="#2b3445" text-anchor="start">宿主：Cities: Skylines II（游戏本体，模组不修改它）</text>
+<rect x="52" y="142" width="232" height="52" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
+<text x="168" y="173" font-size="12.5" font-weight="normal" fill="#2b3445" text-anchor="middle">ECS World / EntityManager</text>
+<rect x="296" y="142" width="232" height="52" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
+<text x="412" y="173" font-size="12.5" font-weight="normal" fill="#2b3445" text-anchor="middle">Game.Net 路网 · SearchSystem</text>
+<rect x="540" y="142" width="232" height="52" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
+<text x="656" y="173" font-size="12.5" font-weight="normal" fill="#2b3445" text-anchor="middle">Game.Prefabs · PrefabSystem</text>
+<rect x="784" y="142" width="232" height="52" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
+<text x="900" y="173" font-size="12.5" font-weight="normal" fill="#2b3445" text-anchor="middle">TerrainSystem · Raycast</text>
+<rect x="1028" y="142" width="232" height="52" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
+<text x="1144" y="173" font-size="12.5" font-weight="normal" fill="#2b3445" text-anchor="middle">OverlayRender · 渲染 (HDRP)</text>
+<rect x="1272" y="142" width="232" height="52" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
+<text x="1388" y="173" font-size="12.5" font-weight="normal" fill="#2b3445" text-anchor="middle">UI 引擎 (Coherent) · React 注册表</text>
+<rect x="1516" y="142" width="232" height="52" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
+<text x="1632" y="173" font-size="12.5" font-weight="normal" fill="#2b3445" text-anchor="middle">ModManager · 官方工具链</text>
+<rect x="40" y="250" width="400" height="232" rx="10" fill="#fff1de" stroke="#d98324" stroke-width="1.6"/>
+<text x="54" y="274" font-size="15" font-weight="bold" fill="#d98324" text-anchor="start">玩家界面 UI/（TypeScript + React + webpack）</text>
+<text x="54" y="298" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">官方 CSII UI 模板：src/index.tsx 入口，</text>
+<text x="54" y="317" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">ts-ui.js（1,863 行）+ CDLC.TS.css（78 个类）</text>
+<text x="54" y="336" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">产出恰好两个文件：CDLC.TS.mjs + CDLC.TS.css</text>
+<text x="54" y="355" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">registry.extend：资产菜单 AssetMenu（打开面板）</text>
+<text x="54" y="374" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">registry.append：GameBottomRight 右缘按钮</text>
+<text x="54" y="393" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">registry.append：Game 主窗口（坞 · 编辑器 ·</text>
+<text x="54" y="412" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">  恢复对话框 · 按键提示卡）</text>
+<text x="54" y="431" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">读游戏全局：cs2/api · cs2/ui · cs2/l10n · React</text>
+<rect x="40" y="522" width="400" height="190" rx="10" fill="#e3edfb" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="54" y="546" font-size="15" font-weight="bold" fill="#2f6db5" text-anchor="start">TsUiSystem（UIUpdate）绑定组 cdlcts</text>
+<text x="54" y="570" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">27 个 ValueBinding + 58 个 TriggerBinding</text>
+<text x="54" y="589" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">字符串 JSON 契约：Catalog · Supports · Editor</text>
+<text x="54" y="608" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">· Hint · SaveData · Custom · Profiles</text>
+<text x="54" y="627" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">语言 zh/en ← lang/*.json（TsLocale 注册）</text>
+<text x="54" y="646" font-size="13" font-weight="normal" fill="#22303f" text-anchor="start">每帧只在内容变化时重新生成 JSON</text>
+<rect x="40" y="732" width="400" height="228" rx="10" fill="#eef0f4" stroke="#6b778c" stroke-width="1.6"/>
+<text x="54" y="756" font-size="15" font-weight="bold" fill="#2b3445" text-anchor="start">一块牌子的生命线（对应红点）</text>
+<text x="54" y="780" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">1  点目录项 → 触发器 Select / SetMode</text>
+<text x="54" y="804" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">2  PlacementTool 放置 → 新建 TsItem 实体</text>
+<text x="54" y="828" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">3  ChunkSystem 读 TsItem → ItemStore</text>
+<text x="54" y="852" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">4  TileWorker（线程池）用 Geo 建网格</text>
+<text x="54" y="876" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">5  主线程 MeshUpload → 渲染器</text>
+<text x="54" y="900" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">6  道路被改 → ItemRoadSystem 让物件跟随</text>
+<text x="54" y="924" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">7  存档时 SaveStrip 写 .tsd，读档 SaveRestore 还原</text>
+<path d="M240 482 L240 522" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)" marker-start="url(#as)"/>
+<text x="250" y="506" font-size="11" font-weight="normal" fill="#37474f" text-anchor="start">绑定 / 触发器</text>
+<rect x="480" y="250" width="900" height="710" rx="10" fill="#f4f8ff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="494" y="274" font-size="16" font-weight="bold" fill="#2f6db5" text-anchor="start">模组程序集 CDLC.TS.dll（约 10.65 万行 C#，net48，经官方 ModPostProcessor）</text>
+<rect x="500" y="290" width="860" height="72" rx="10" fill="#e3edfb" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="514" y="314" font-size="15" font-weight="bold" fill="#2f6db5" text-anchor="start">Mod.cs（IMod.OnLoad）</text>
+<text x="514" y="338" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">注册 23 个系统并排序：PrefabUpdate · Modification1 / 4B / 5 / End · MainLoop · Serialize · ToolUpdate · UIUpdate</text>
+<rect x="500" y="380" width="420" height="190" rx="10" fill="#e3edfb" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="514" y="404" font-size="15" font-weight="bold" fill="#2f6db5" text-anchor="start">Tool/（14.5k 行）</text>
+<text x="514" y="428" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">PlacementTool = ToolBaseSystem（toolID CDLC.TS.Placement）</text>
+<text x="514" y="447" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">模式 0 放置 · 1 删除 · 2 编辑 · 3 吸取样式</text>
+<text x="514" y="466" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">另有 17 个读取 / 辅助文件：RoadReader · SurfaceReader ·</text>
+<text x="514" y="485" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">  ChainReader · JunctionReader · KerbReader · EdgeCache …</text>
+<text x="514" y="504" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">ItemRoadSystem（ModificationEnd）：物件跟随道路</text>
+<text x="514" y="523" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">  按位置找路（Game.Net.SearchSystem），Move It 友好</text>
+<rect x="940" y="380" width="420" height="190" rx="10" fill="#e3edfb" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="954" y="404" font-size="15" font-weight="bold" fill="#2f6db5" text-anchor="start">Systems/（7.7k 行）</text>
+<text x="954" y="428" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">ClearMarkings* / ClearLate：隐藏原版标线 (4B / End)</text>
+<text x="954" y="447" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">AreaFitSystem：面状标线、立柱落地贴合路面</text>
+<text x="954" y="466" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">SaveDataSystem + SaveStrip / SaveRestore：存档外保存</text>
+<text x="954" y="485" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">KerbSystem · PlantSystem · LoadWarmSystem ·</text>
+<text x="954" y="504" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">  TsBatchSystem · ToolbarTab · TsExtension（给 RIE）</text>
+<rect x="500" y="590" width="420" height="190" rx="10" fill="#e3edfb" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="514" y="614" font-size="15" font-weight="bold" fill="#2f6db5" text-anchor="start">Render/（5.8k 行）</text>
+<text x="514" y="638" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">ChunkSystem（MainLoop）：ItemStore 按瓦片管理</text>
+<text x="514" y="657" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">TileWorker：线程池里 ChunkBuilder 建网格（无 Unity 对象）</text>
+<text x="514" y="676" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">MeshUpload：主线程分步 → GameObject + MeshRenderer</text>
+<text x="514" y="695" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">TsMaterials：HDRP/Lit + 游戏着色器（默认 lit）</text>
+<text x="514" y="714" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">FacePainter · ThumbnailStore · SlowLog（性能汇总）</text>
+<rect x="940" y="590" width="420" height="190" rx="10" fill="#e3edfb" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="954" y="614" font-size="15" font-weight="bold" fill="#2f6db5" text-anchor="start">Data/TsItem.cs（唯一的 ECS 组件）</text>
+<text x="954" y="638" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">每个放置的物件 = 一个实体（序列化版本 11）</text>
+<text x="954" y="657" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">位置 · 朝向 · 类型哈希 · 支架哈希 · 设置串 · 道路键</text>
+<text x="954" y="676" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">带 LivePath：游戏自己的存档不写入它</text>
+<text x="954" y="695" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">渲染侧用纯副本 ItemRecord（Geo/ItemStore）</text>
+<rect x="500" y="800" width="860" height="140" rx="10" fill="#e2f4df" stroke="#3c8d40" stroke-width="1.6"/>
+<text x="514" y="824" font-size="15" font-weight="bold" fill="#3c8d40" text-anchor="start">Geo/ + Snap/ 纯逻辑层（约 7.8 万行，317 个文件，0 个引擎引用，占程序集 73%）</text>
+<text x="514" y="848" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">目录：SignCatalog · GuideTemplates · MarkingTemplates · SupportCatalog　　构建：ChunkBuilder · SignBuilder · MarkingPlan · MeshBuilder</text>
+<text x="514" y="868" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">规划与吸附：SupportPlanner · Assembly · EdgeSnap（Snap/）　　跟随：FollowCurve · FollowBatch · RigidMotion · ItemStore</text>
+<text x="514" y="888" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">文字：TextPlans · SignFonts · TextBoxes · TextFonts　　存档记录：SaveRecord　　工作线程：LatestWorker · FitWorker · ShadowWorker</text>
+<text x="514" y="908" font-size="12.5" font-weight="normal" fill="#22303f" text-anchor="start">测试工程直接编译这些文件（net10.0，无游戏引用）；它们通过静态钩子（日志、主线程闸门）与引擎交流，从不引用上层</text>
+<path d="M710 570 L710 590" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1150 570 L1150 590" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)"/>
+<path d="M710 780 L710 800" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)"/>
+<text x="718" y="795" font-size="11" font-weight="normal" fill="#37474f" text-anchor="start">使用</text>
+<path d="M1150 780 L1150 800" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)"/>
+<text x="1158" y="795" font-size="11" font-weight="normal" fill="#37474f" text-anchor="start">使用</text>
+<circle cx="418" cy="546" r="12" fill="#c62828"/>
+<text x="418" y="551" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<circle cx="898" cy="404" r="12" fill="#c62828"/>
+<text x="898" y="409" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<circle cx="868" cy="404" r="12" fill="#c62828"/>
+<text x="868" y="409" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+<circle cx="898" cy="614" r="12" fill="#c62828"/>
+<text x="898" y="619" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<circle cx="868" cy="614" r="12" fill="#c62828"/>
+<text x="868" y="619" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<circle cx="1338" cy="824" r="12" fill="#c62828"/>
+<text x="1338" y="829" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<circle cx="1338" cy="404" r="12" fill="#c62828"/>
+<text x="1338" y="409" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+<path d="M440 640 L470 640 L470 470 L500 470" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)"/>
+<text x="442" y="462" font-size="11" font-weight="normal" fill="#37474f" text-anchor="start">触发器</text>
+<path d="M240 208 L240 250" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)" marker-start="url(#as)"/>
+<text x="250" y="236" font-size="11" font-weight="normal" fill="#37474f" text-anchor="start">注册表 · 绑定</text>
+<path d="M700 208 L700 250" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)" marker-start="url(#as)"/>
+<text x="710" y="236" font-size="11" font-weight="normal" fill="#37474f" text-anchor="start">读取 / 工具系统 / 实体</text>
+<path d="M1150 208 L1150 250" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)" marker-start="url(#as)"/>
+<text x="1160" y="236" font-size="11" font-weight="normal" fill="#37474f" text-anchor="start">游戏系统 · 预制体 · 路网</text>
+<rect x="1420" y="250" width="340" height="710" rx="10" fill="#fde8f0" stroke="#c2457a" stroke-width="1.6"/>
+<text x="1434" y="274" font-size="16" font-weight="bold" fill="#c2457a" text-anchor="start">集成与外部</text>
+<rect x="1436" y="290" width="308" height="250" rx="10" fill="#fde8f0" stroke="#c2457a" stroke-width="1.6"/>
+<text x="1450" y="314" font-size="15" font-weight="bold" fill="#c2457a" text-anchor="start">RIE（CDLC.TS.RIE，独立模组）</text>
+<text x="1450" y="338" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">实时信息扩展：信号灯 · 屏幕 · 灯头</text>
+<text x="1450" y="357" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">主模组一侧是 TsExtension（Api = 1，旧单字段）：</text>
+<text x="1450" y="376" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">  Join · OthersHideMarking · IsReservedRoad ·</text>
+<text x="1450" y="395" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">  RegisterSection（扩展字节存进 .tsd）</text>
+<text x="1450" y="414" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">InternalsVisibleTo(CDLC.TS.RIE)</text>
+<text x="1450" y="433" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">RIE 编译时引用 bin/CDLC.TS.dll</text>
+<text x="1450" y="452" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">rie-ref-check 在每次发布前核对成员</text>
+<text x="1450" y="478" font-size="12" font-weight="bold" fill="#c2457a" text-anchor="start">第二个扩展 ARL（自动标线，开发中）：</text>
+<text x="1450" y="497" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">  经 Register(Hooks) 加入（ApiLevel = 2）</text>
+<text x="1450" y="516" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">  各扩展的钩子并存，任一为真即真</text>
+<text x="1450" y="535" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">InternalsVisibleTo(CDLC.TS.ARL)</text>
+<rect x="1436" y="560" width="308" height="150" rx="10" fill="#fde8f0" stroke="#c2457a" stroke-width="1.6"/>
+<text x="1450" y="584" font-size="15" font-weight="bold" fill="#c2457a" text-anchor="start">Anarchy · Move It</text>
+<text x="1450" y="608" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">只通过行为交互：改 Curve / Transform</text>
+<text x="1450" y="627" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">  并打 Updated，由 Follow 处理</text>
+<text x="1450" y="646" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">它们摘掉 Overridden 时，ClearLateSystem</text>
+<text x="1450" y="665" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">  在 ModificationEnd 末尾重新隐藏</text>
+<rect x="1436" y="730" width="308" height="215" rx="10" fill="#fde8f0" stroke="#c2457a" stroke-width="1.6"/>
+<text x="1450" y="754" font-size="15" font-weight="bold" fill="#c2457a" text-anchor="start">TsBatchApi（公共静态，JSON）</text>
+<text x="1450" y="778" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">外部工具按名字找到它：</text>
+<text x="1450" y="797" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">  CDLC.TS.TsBatchApi, CDLC.TS</text>
+<text x="1450" y="816" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">Submit / Describe / Status</text>
+<text x="1450" y="835" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">第一个使用者是互通设计器</text>
+<text x="1450" y="854" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">主模组不引用 Core · BusDriver · MiniMap，</text>
+<text x="1450" y="873" font-size="12" font-weight="normal" fill="#22303f" text-anchor="start">  它们靠名字在运行时反过来找本模组</text>
+<path d="M1380 400 L1420 400" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)" marker-start="url(#as)"/>
+<path d="M1380 630 L1420 630" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)" marker-start="url(#as)"/>
+<path d="M1380 830 L1420 830" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)" marker-start="url(#as)"/>
+<path d="M1150 960 L1150 990" fill="none" stroke="#546e7a" stroke-width="2" marker-end="url(#a)" marker-start="url(#as)"/>
+<text x="1160" y="982" font-size="11" font-weight="normal" fill="#37474f" text-anchor="start">SaveData ↔ .tsd</text>
+<rect x="40" y="990" width="1720" height="120" rx="10" fill="#fff9d9" stroke="#b59f00" stroke-width="1.6"/>
+<text x="54" y="1014" font-size="15" font-weight="bold" fill="#b59f00" text-anchor="start">持久化 ModsData/CDLC.TS/（不在游戏存档内：卸载模组后存档仍是普通城市，重装后恢复）</text>
+<rect x="52" y="1040" width="275" height="56" rx="8" fill="#ffffff" stroke="#c9b800"/>
+<text x="189" y="1064" font-size="12" font-weight="normal" fill="#2b3445" text-anchor="middle">Saves/&lt;城市&gt;/&lt;存档&gt;.tsd</text>
+<text x="189" y="1082" font-size="11" font-weight="normal" fill="#6b6b3a" text-anchor="middle">（SaveRecord，每存档留 4 份）</text>
+<rect x="337" y="1040" width="275" height="56" rx="8" fill="#ffffff" stroke="#c9b800"/>
+<text x="474" y="1064" font-size="12" font-weight="normal" fill="#2b3445" text-anchor="middle">Custom/ 玩家的 PNG 图片</text>
+<rect x="622" y="1040" width="275" height="56" rx="8" fill="#ffffff" stroke="#c9b800"/>
+<text x="759" y="1064" font-size="12" font-weight="normal" fill="#2b3445" text-anchor="middle">Thumbs/ 缩略图缓存 · Fonts/ 字体</text>
+<rect x="907" y="1040" width="275" height="56" rx="8" fill="#ffffff" stroke="#c9b800"/>
+<text x="1044" y="1064" font-size="12" font-weight="normal" fill="#2b3445" text-anchor="middle">preferences.json</text>
+<text x="1044" y="1082" font-size="11" font-weight="normal" fill="#6b6b3a" text-anchor="middle">（features: roadFollow · gameShader …）</text>
+<rect x="1192" y="1040" width="275" height="56" rx="8" fill="#ffffff" stroke="#c9b800"/>
+<text x="1329" y="1064" font-size="12" font-weight="normal" fill="#2b3445" text-anchor="middle">*-experiment.txt</text>
+<text x="1329" y="1082" font-size="11" font-weight="normal" fill="#6b6b3a" text-anchor="middle">（material · marking，实时生效的试验开关）</text>
+<rect x="1477" y="1040" width="275" height="56" rx="8" fill="#ffffff" stroke="#c9b800"/>
+<text x="1614" y="1064" font-size="12" font-weight="normal" fill="#2b3445" text-anchor="middle">Logs/CDLC.TS.Mod.log</text>
+<text x="1614" y="1082" font-size="11" font-weight="normal" fill="#6b6b3a" text-anchor="middle">（+ -prev，三分钟性能汇总）</text>
+</svg>

@@ -1,0 +1,65 @@
+<Publish>
+  <!--The private TEST listing (named ...Test since 7 November 2026; published as a new Private listing on 19 October 2026, first Publish printed Id=163970). Test builds go here with NewVersion / Update. The public listing has its own file, PublishConfiguration.Public.xml. Never publish to 145145, which belongs to someone else.-->
+  <ModId Value="163970" />
+  <DisplayName Value="CSL Driving Life : StreetScape China Pack Test" />
+  <ShortDescription Value="易用、高效的中国道路设施：国标交通标志、路面标线、护栏、声屏障、绿化、灯杆广告。/ Easy-to-use, efficient Chinese road signs, markings and street furniture." />
+  <LongDescription>
+本模组用于放置和编辑中国道路设施：国标交通标志、路面标线、护栏、声屏障、绿化，以及灯杆广告。
+
+在目录中选择牌子，指向路边并单击即可放置。支架（单立柱、悬臂或门架）按道路情况自动选择，牌面自动朝向来车方向。牌面上的文字、地名、路名和箭头均可修改，设置旁有预览。支持撤销和重做；按住 Ctrl 单击已放置的对象，可提取其样式。
+
+标线和护栏沿道路绘制，依次单击起点和终点，弯道与路口自动处理。一个支架可以挂多块牌子。
+
+交通标志包括 GB 5768.2 的 273 种标志、GB 17733 的地名标志、BRT 与收费站牌面、LED 可变信息屏和可自定义文字的发光文字灯箱。标线依据 GB 5768.3，可隐藏并恢复原版标线。护栏有波形梁、混凝土护栏、城市隔离栏、仿古栏杆和水马；声屏障有金属、水泥、砖墙和高架封闭式几种；另有施工围挡。绿化包括树池、分车绿带、高架花箱和花钵，植物使用游戏自带资源。灯杆广告包括道旗、灯箱、中国结、灯笼和霓虹造型。路牌与灯杆广告可使用自定义 PNG 图片。
+
+- 本模组只提供外观设施，不改变限速、让行和车道连接。
+- 牌面和标线依据国家标准（GB 5768、GB 17733）重新绘制，未使用标准中的原图；标准未规定的尺寸为估计值，与实物可能有差异。
+- 放置的内容保存在存档旁的 ModsData/CDLC.TS/Saves，不写入游戏存档，未安装本模组时存档不受影响。卸载前，请先在面板中点击“恢复全部原版标线”，再保存存档。
+- 使用 Move It 移动道路时，沿路的牌子、标线和护栏随之移动。
+- 设置页显示本模组的显存占用，并按显卡给出显示距离的建议。
+
+可选安装 Realistic Information Extension：安装后 LED 屏随路况变化，未安装时显示手动设置的内容。
+
+牌面使用交通标志专用字体（GB18030），字体文件标注的版权所有者为中华人民共和国交通部；可在 ModsData/CDLC.TS/Fonts 中替换为自定义字体。工具栏标签页的实现方式参考了 Find It 和 Anarchy，未使用其代码。
+
+本模组仍在更新。问题反馈请前往 GitHub 提交 Issue，并尽量附上 Logs/CDLC.TS.Mod.log：https://github.com/tearncolour/CDL-StreetScape/issues
+
+源码以 AGPL-3.0 许可发布于：https://github.com/tearncolour/CDL-StreetScape
+
+— MeroT
+
+---
+
+This mod places and edits Chinese road furniture: national-standard traffic signs, road markings, barriers, noise barriers, greening, and lamp-post advertising.
+
+Select a sign in the catalogue, point at the roadside and click to place it. The support (single post, cantilever or gantry) is chosen to suit the road, and the board faces the oncoming traffic. The text, place names, road names and arrows on a board can be edited, with a preview beside the settings. Undo and redo are supported; Ctrl+click on a placed object picks up its style.
+
+Markings and barriers are drawn along the road by clicking the start and then the end; bends and junctions are handled automatically. One support can carry several boards.
+
+Traffic signs include the 273 signs of GB 5768.2, the place-name signs of GB 17733, BRT and toll plaza boards, LED message screens, and illuminated text boxes with editable text. Markings follow GB 5768.3, and the game's own markings can be hidden and restored. Barriers include W-beam, concrete, city fences, classical railings and water barriers; noise barriers are available in metal, cement, brick and enclosed viaduct types; construction hoarding is also included. Greening comprises tree pits, green belts, viaduct planters and flower bowls, using the game's own plants. Lamp-post advertising includes banners, light boxes, Chinese knots, lanterns and neon figures. Signs and lamp-post advertising can use custom PNG pictures.
+
+- The mod provides decoration only; it does not change speed limits, priorities or lane connections.
+- Signs and markings are redrawn from the Chinese national standards (GB 5768, GB 17733), not copied from their figures. Sizes that the standards do not specify are estimates, and may differ from the real objects.
+- Placed items are stored beside the save (ModsData/CDLC.TS/Saves), not in it, so a save is unaffected without the mod. Before uninstalling, press "Restore all of the game's markings" in the panel and save the game.
+- When a road is moved with Move It, the signs, markings and barriers beside it move with it.
+- The settings page shows the graphics memory used by the mod and suggests a draw distance for the graphics card.
+
+The Realistic Information Extension is optional: with it installed the LED screens follow the traffic; without it they show the content set by hand.
+
+The sign font is a traffic-sign font in GB18030; the font file names the Ministry of Transport of the PRC (中华人民共和国交通部) as its copyright holder. It can be replaced with a font of your own in ModsData/CDLC.TS/Fonts. The toolbar tab follows the approach of Find It and Anarchy; no code was taken from them.
+
+The mod is still being updated. Please report problems as an issue on GitHub, with Logs/CDLC.TS.Mod.log attached where possible: https://github.com/tearncolour/CDL-StreetScape/issues
+
+The source code is published under AGPL-3.0 at https://github.com/tearncolour/CDL-StreetScape
+
+— MeroT
+</LongDescription>
+  <Thumbnail Value="Properties/Thumbnail.png" />
+  <Tag Value="Code Mod" />
+  <ExternalLink Type="github" Url="https://github.com/tearncolour/CDL-StreetScape" />
+  <ModVersion Value="0.12.107" />
+  <GameVersion Value="1.6.*" />
+  <ChangeLog Value="0.12.107：设置页内存面板重新排版，选中效果更淡；收费站、绿化专用的东西不再混进“护栏”标签。 / 0.12.107: the memory section of the settings is laid out again with a quieter selection; what belongs to a toll plaza or to the greening alone is no longer in the barrier tab." />
+  <!--Public / Private / Unlisted: Private at the user's request on 19 October 2026 ("上传到PDX,设置为私有")-->
+  <AccessLevel Value="Private" />
+</Publish>

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CDLC.TS.Tests\CDLC.TS.Tests.csproj" />
+    <Compile Include="..\..\Render\ChunkSystem.cs" Link="Production\ChunkSystem.cs" />
+    <Compile Include="..\..\Render\MeshUpload.cs" Link="Production\MeshUpload.cs" />
+    <Compile Include="..\..\Render\TileWorker.cs" Link="Production\TileWorker.cs" />
+  </ItemGroup>
+</Project>

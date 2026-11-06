@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Checks the conversions between the game's math types and this mod's pure ones against the game's own functions (Colossal.Mathematics). Needs the game installed: dotnet run -p:ManagedPath="<Cities2_Data/Managed>". -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\</OutputPath>
+    <ManagedPath Condition="'$(ManagedPath)' == ''">$(CSII_MANAGEDPATH)</ManagedPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Snap\*.cs" Link="Mod\Snap\%(Filename)%(Extension)" />
+    <Compile Include="..\..\Tool\CurveConvert.cs" Link="Mod\Tool\CurveConvert.cs" />
+    <Reference Include="Colossal.Mathematics"><HintPath>$(ManagedPath)\Colossal.Mathematics.dll</HintPath></Reference>
+    <Reference Include="Unity.Mathematics"><HintPath>$(ManagedPath)\Unity.Mathematics.dll</HintPath></Reference>
+    <Reference Include="Unity.Burst"><HintPath>$(ManagedPath)\Unity.Burst.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

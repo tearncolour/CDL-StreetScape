@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The pure files of the facade sampling and the surface plan with their tests and nothing else: a mutation run takes seconds, not a rebuild of the whole mod. Built with dotnet build Tests/FacadeMini/FacadeMini.csproj -c Release. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>CDLC.TS.Tests</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\</OutputPath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Stand.cs" />
+    <Compile Include="..\..\Snap\Geometry.cs" Link="Mod\Snap\Geometry.cs" />
+    <Compile Include="..\..\Geo\WallMount.cs" Link="Mod\Geo\WallMount.cs" />
+    <Compile Include="..\..\Geo\ArcLayout.cs" Link="Mod\Geo\ArcLayout.cs" />
+    <Compile Include="..\..\Geo\FacadeSampling.cs" Link="Mod\Geo\FacadeSampling.cs" />
+    <Compile Include="..\..\Geo\BuildingSurface.cs" Link="Mod\Geo\BuildingSurface.cs" />
+    <Compile Include="..\CDLC.TS.Tests\FacadeSamplingTests.cs" Link="Tests\FacadeSamplingTests.cs" />
+    <Compile Include="..\CDLC.TS.Tests\BuildingSurfaceTests.cs" Link="Tests\BuildingSurfaceTests.cs" />
+  </ItemGroup>
+</Project>

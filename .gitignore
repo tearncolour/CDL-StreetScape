@@ -1,0 +1,23 @@
+# Build outputs (the mod and every test project)
+bin/
+obj/
+.vs/
+*.user
+
+# What the game's modding toolchain leaves next to a project it builds (the post-processor's process id file)
+Library/
+
+# Offline pictures, review and preview output
+out/
+/--codes/
+
+# Working area (not in git): release snapshots, logs, version scripts, screenshots, evidence of the tests
+scratch/
+
+# Drafts of the tab icons (pictures, 20 MB; the icons' sources are in IconSources/)
+/Art/
+
+# Working documents kept locally, not published
+/DEVLOG.md
+/DESIGN-*.md
+/ARCHITECTURE.md

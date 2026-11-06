@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>CDLC.TS.Tests</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+
+  <!-- Only the pure, Unity-free parts of the mod are compiled into the test runner. -->
+  <ItemGroup>
+    <Compile Include="..\..\Snap\*.cs" Link="Mod\Snap\%(Filename)%(Extension)" />
+    <Compile Include="..\..\Geo\*.cs" Link="Mod\Geo\%(Filename)%(Extension)" />
+    <Compile Include="..\..\Geo\Signs\*.cs" Link="Mod\Geo\Signs\%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

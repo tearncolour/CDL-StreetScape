@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>CDLC.TS.Bench</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\</OutputPath>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <!-- The pure, Unity-free parts of the mod, compiled for the .NET Framework profile so that they run under Mono (Unity's MonoBleedingEdge is what the game itself runs on): a benchmark of what scales with the number of signs. -->
+  <ItemGroup>
+    <Compile Include="..\..\Snap\*.cs" Link="Mod\Snap\%(Filename)%(Extension)" />
+    <Compile Include="..\..\Geo\*.cs" Link="Mod\Geo\%(Filename)%(Extension)" />
+    <Compile Include="..\..\Geo\Signs\*.cs" Link="Mod\Geo\Signs\%(Filename)%(Extension)" />
+    <!-- The painter and the dots of the LED screens (Unity-free, as the preview program has them): the dots of a variable-message sign are read from a painted picture. -->
+    <Compile Include="..\..\Render\LegendPainter.cs" Link="Mod\LegendPainter.cs" />
+    <Compile Include="..\..\Render\GuidePainter.cs" Link="Mod\GuidePainter.cs" />
+    <Compile Include="..\..\Render\LedScreens.cs" Link="Mod\LedScreens.cs" />
+    <Compile Include="..\..\Render\CustomPictures.cs" Link="Mod\CustomPictures.cs" />
+    <Compile Include="../CDLC.TS.Tests/SurfaceFixture.cs" Link="SurfaceFixture.cs" />
+    <Compile Include="../CDLC.TS.Tests/ShapeFixture.cs" Link="ShapeFixture.cs" />
+    <Compile Include="../CDLC.TS.Tests/TextFixture.cs" Link="TextFixture.cs" />
+    <Compile Include="../CDLC.TS.Tests/FollowReference.cs" Link="FollowReference.cs" />
+    <Compile Include="../CDLC.TS.Tests/FollowFixture.cs" Link="FollowFixture.cs" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+</Project>

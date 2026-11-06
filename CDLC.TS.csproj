@@ -1,0 +1,237 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Configurations>Debug;Release</Configurations>
+    <!-- Properties/AssemblyInfo.cs carries InternalsVisibleTo for CDLC.TS.RIE, which RIE is built against. -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- The output stays in bin\ (not bin\Release\net48\): RIE's project files reference ..\bin\CDLC.TS.dll, and Tools/publish.sh checks it. -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\</OutputPath>
+    <NoWarn>$(NoWarn);MSB3277</NoWarn>
+    <DefaultItemExcludes>$(DefaultItemExcludes);UI\node_modules\**;UI\build\**</DefaultItemExcludes>
+
+    <!--The file where mod information which is required for publishing mod on PDX mods are stored-->
+    <PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
+  </PropertyGroup>
+
+  <!--Imports must be after PropertyGroup block-->
+  <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.props" />
+  <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.targets" />
+
+  <!-- Compile against the game's own core libraries: they define Span/ReadOnlySpan, which the net48 reference assemblies lack and the overloads of EntityManager.CreateEntity and
+       CreateArchetype need (PlantSystem; CDL : Racing does the same). The official MSCORLIBPath reference alone does not give them (CS0518). -->
+  <PropertyGroup Condition="'$(ManagedPath)' != ''">
+    <FrameworkPathOverride>$(ManagedPath)</FrameworkPathOverride>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Game">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.Core">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.Collections">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.Mathematics">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.Logging">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.PSI.Common">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.IO.AssetDatabase">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.Localization">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.UI">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.UI.Binding">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Entities">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>false</Private>
+    </Reference>
+    <!-- No CDL mod is referenced: links to Core, BusDriver and MiniMap are found by name at run time and are optional. -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System">
+      <Private>false</Private>
+    </Reference>
+    <Reference Update="System.Core">
+      <Private>false</Private>
+    </Reference>
+    <Reference Update="System.Data">
+      <Private>false</Private>
+    </Reference>
+    <!-- GDI+ for the picture of a sign face (the game ships Mono's System.Drawing; MassTransit uses it for its station signs). -->
+    <Reference Include="System.Drawing">
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- The game has every assembly this one refers to. The implicit framework references (System.Xml, System.Numerics, mscorlib ...) resolve from the game's Managed folder and would be copied
+       next to the assembly, and the official DeployWIP copies the whole of OutDir into the content. -->
+  <Target Name="NoReferencedFilesInOutput" AfterTargets="ResolveAssemblyReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <Compile Remove="Tests\**\*.cs" />
+    <Compile Remove="RIE\**\*.cs" />
+    <Compile Remove="ARL\**\*.cs" />
+    <Compile Remove="scratch\**\*.cs" />
+    <Compile Remove="out\**\*.cs" />
+    <Compile Remove="bin\**\*.cs" />
+    <Compile Remove="obj\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="lang\*.json" LogicalName="CDLC.TS.lang.%(Filename).json" />
+  </ItemGroup>
+
+  <!-- What the content folder holds besides the assembly (the official DeployWIP copies the whole of OutDir): the files are put into OutDir by the build. -->
+  <ItemGroup>
+    <None Include="lang\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\*.*">
+      <Link>Fonts\%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Icons\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mod.json;NOTICE.md;README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!--
+    The panel's script and style are built by the UI project (UI/, the official CSII UI template: TypeScript, React, webpack) into obj\...\ui and put into OutDir beside the assembly. npm ci
+    runs only when UI\node_modules lacks webpack (the first build on a machine; behind a proxy set HTTPS_PROXY in the shell that runs dotnet).
+  -->
+  <Target Name="BuildUi" AfterTargets="CopyFilesToOutputDirectory">
+    <PropertyGroup>
+      <UiProjectDir>$(MSBuildProjectDirectory)\UI</UiProjectDir>
+      <UiBuildDir>$(MSBuildProjectDirectory)\$(IntermediateOutputPath)ui</UiBuildDir>
+    </PropertyGroup>
+    <Exec Command="npm --version" ConsoleToMSBuild="true" IgnoreExitCode="true" StandardOutputImportance="low" StandardErrorImportance="low">
+      <Output TaskParameter="ExitCode" PropertyName="NpmExitCode" />
+    </Exec>
+    <Error Condition="'$(NpmExitCode)' != '0'" Text="npm was not found on the PATH of this build (exit code $(NpmExitCode)): the panel is built by UI\ with node and npm (node 18 or later)." />
+    <PropertyGroup Condition="'$(NpmProxy)' != ''">
+      <NpmCiEnvironment>HTTPS_PROXY=$(NpmProxy);HTTP_PROXY=$(NpmProxy)</NpmCiEnvironment>
+    </PropertyGroup>
+    <Exec Condition="!Exists('$(UiProjectDir)\node_modules\webpack-cli\bin\cli.js')" Command="npm ci --no-audit --no-fund" WorkingDirectory="$(UiProjectDir)" EnvironmentVariables="$(NpmCiEnvironment)" />
+    <RemoveDir Directories="$(UiBuildDir)" />
+    <Exec Command="npm run build" WorkingDirectory="$(UiProjectDir)" EnvironmentVariables="CDLC_UI_OUT=$(UiBuildDir)" />
+    <ItemGroup>
+      <UiBuilt Include="$(UiBuildDir)\*" />
+    </ItemGroup>
+    <Error Condition="!Exists('$(UiBuildDir)\$(AssemblyName).mjs') Or !Exists('$(UiBuildDir)\$(AssemblyName).css')" Text="The UI build did not make $(AssemblyName).mjs and $(AssemblyName).css in '$(UiBuildDir)'." />
+    <Error Condition="'@(UiBuilt->Count())' != '2'" Text="The UI build left @(UiBuilt->Count()) files in '$(UiBuildDir)' (@(UiBuilt->'%(Filename)%(Extension)', ', ')); the content takes exactly $(AssemblyName).mjs and $(AssemblyName).css." />
+    <Copy SourceFiles="@(UiBuilt)" DestinationFolder="$(OutDir)" />
+    <!-- Registered as written by this build: the IncrementalClean after it deletes what an earlier build wrote and this one did not (the first build after the files were copied by a
+         None item left the content without them, and without a message). -->
+    <ItemGroup>
+      <FileWrites Include="@(UiBuilt->'$(OutDir)%(Filename)%(Extension)')" />
+    </ItemGroup>
+  </Target>
+
+  <!-- The ModPostProcessor talks to its local runner by gRPC over HTTP/2, and a proxy variable in the environment sends that through the proxy (it fails with 'unable to establish HTTP/2 connection'):
+       a proxy is for the one npm ci only, -p:NpmProxy=<url>. -->
+  <Target Name="GuardProxyEnvironment" BeforeTargets="RunModPostProcessor">
+    <Error Condition="'$(HTTPS_PROXY)$(HTTP_PROXY)$(ALL_PROXY)' != ''" Text="A proxy variable (HTTPS_PROXY, HTTP_PROXY or ALL_PROXY) is set in the environment of this build: the ModPostProcessor's calls to its local runner would go through it and fail. Unset it for dotnet; for the first npm ci behind a proxy use -p:NpmProxy=&lt;url&gt;." />
+  </Target>
+
+  <Target Name="GuardUiInOutput" BeforeTargets="DeployWIP">
+    <Error Condition="!Exists('$(OutDir)$(AssemblyName).mjs') Or !Exists('$(OutDir)$(AssemblyName).css')" Text="$(AssemblyName).mjs or $(AssemblyName).css is not in '$(OutDir)': the content would be deployed without the panel." />
+  </Target>
+
+  <ItemGroup>
+    <None Include="$(ModPropsFile)" Link="Properties\Mod.props" />
+    <None Include="$(ModTargetsFile)" Link="Properties\Mod.targets" />
+  </ItemGroup>
+
+  <!--
+    The deploy directory of the official DeployWIP and of the publish targets is this mod's content folder of the version in mod.json, not the local Mods folder: the game
+    plays the subscribed copy, and a second copy in Mods loads twice. The target that sets DeployDir is the official BuildGetFullPaths; this one runs after it, and before the publish targets read the content path (a publish without a build does not run the build targets).
+  -->
+  <PropertyGroup>
+    <ReleaseContentRoot Condition="'$(ReleaseContentRoot)' == ''">$(MSBuildProjectDirectory)\..\cdl_release_20261018</ReleaseContentRoot>
+  </PropertyGroup>
+
+  <Target Name="ContentFolderAsDeployDir" AfterTargets="BuildGetFullPaths" BeforeTargets="PublishGetFullPaths">
+    <PropertyGroup>
+      <ModVersion>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)\mod.json')), '"version"\s*:\s*"([^"]+)"').Groups[1].Value)</ModVersion>
+      <DeployDir>$([System.IO.Path]::GetFullPath('$(ReleaseContentRoot)\content-ts-$(ModVersion)\$(TargetName)'))</DeployDir>
+      <LocalModsFullPath Condition="'$(LocalModsPath)' != ''">$([System.IO.Path]::GetFullPath('$(LocalModsPath)'))</LocalModsFullPath>
+    </PropertyGroup>
+    <Error Condition="'$(ModVersion)' == ''" Text="No version found in mod.json." />
+    <Error Condition="'$(AllowLocalDeploy)' != 'true' And '$(LocalModsFullPath)' != '' And $(DeployDir.StartsWith('$(LocalModsFullPath)', System.StringComparison.OrdinalIgnoreCase))"
+           Text="The content folder '$(DeployDir)' is inside the local Mods folder: a copy there loads twice next to the subscribed one. Use -p:AllowLocalDeploy=true if that is meant." />
+    <Error Condition="'$(ForceRebuild)' != 'true' And Exists('$(DeployDir)\..\.uploaded')"
+           Text="The content folder of version $(ModVersion) was uploaded ('$(DeployDir)\..\.uploaded'): building it again would replace what was published. Raise the version, or use -p:ForceRebuild=true." />
+  </Target>
+
+  <!-- The last gate before the official DeployWIP empties and rewrites its directory: whatever set DeployDir, it is not the local Mods folder. -->
+  <Target Name="GuardDeployDir" BeforeTargets="DeployWIP">
+    <PropertyGroup>
+      <LocalModsFullPath Condition="'$(LocalModsPath)' != ''">$([System.IO.Path]::GetFullPath('$(LocalModsPath)'))</LocalModsFullPath>
+      <DeployFullPath>$([System.IO.Path]::GetFullPath('$(DeployDir)'))</DeployFullPath>
+    </PropertyGroup>
+    <Error Condition="'$(AllowLocalDeploy)' != 'true' And '$(LocalModsFullPath)' != '' And $(DeployFullPath.StartsWith('$(LocalModsFullPath)', System.StringComparison.OrdinalIgnoreCase))"
+           Text="The deploy directory '$(DeployFullPath)' is inside the local Mods folder: the build would empty it and leave a second copy of the mod there. Use -p:AllowLocalDeploy=true if that is meant." />
+  </Target>
+</Project>
